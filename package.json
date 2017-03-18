@@ -4,6 +4,10 @@
   "description": "mock apis",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "precommit": "node -e \"console.log(JSON.stringify(require('./index.js')()))\" > dist/data.json",
+    "prepush": "eslint index.js"
+  },
   "dependencies": {
     "faker": "^4.1.0",
     "json-server": "^0.9.6"
@@ -12,6 +16,7 @@
     "eslint": "^3.18.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^2.1.1"
+    "eslint-plugin-standard": "^2.1.1",
+    "husky": "^0.13.2"
   }
 }
