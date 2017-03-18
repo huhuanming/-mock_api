@@ -1,12 +1,10 @@
 # Mock API
 
-## How to Install
+## How to Use
 
 ```shell
-npm install -g json-server faker
+npm install -g json-server
 ```
-
-## How to Use
 
 ```shell
 json-server https://raw.githubusercontent.com/huhuanming/mock_api/master/dist/data.json  --port 8111
