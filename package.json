@@ -5,7 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "precommit": "node -e \"console.log(JSON.stringify(require('./index.js')()))\" > dist/data.json && git add dist/data.json",
+    "build": "node -e \"console.log(JSON.stringify(require('./index.js')()))\" > dist/data.json",
+    "precommit": "yarn build && git add dist/data.json",
     "prepush": "eslint index.js"
   },
   "dependencies": {
