@@ -16,5 +16,14 @@ module.exports = () => {
     })
   }
 
-  return { users, }
+  const startImage = {
+    text: '© HaHa',
+    img: 'http://7xqlzr.dl1.z0.glb.clouddn.com/' +
+    '107bb4894b46d75a892da6fa80ef504a.jpg',
+  }
+
+  return {
+    users,
+    'start-image': startImage,
+  }
 }
