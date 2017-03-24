@@ -1,18 +1,26 @@
-var faker = require('faker')
+var faker = require('faker/locale/zh_CN')
 
 module.exports = () => {
   let users = []
 
   for (let id = 0; id < 50; id++) {
-    const firstName = faker.name.firstName()
+    const firstName = faker.name.lastName()
     const lastName = faker.name.firstName()
     const phoneNumber = faker.phone.phoneNumberFormat()
 
     users.push({
       id,
-      firstName,
-      lastName,
-      phoneNumber,
+      name: {
+        firstName,
+        lastName,
+      },
+      info: {
+        phoneNumber,
+        address: {
+          city: faker.address.city(),
+          zpiCode: faker.address.zipCode(),
+        },
+      },
     })
   }
 
