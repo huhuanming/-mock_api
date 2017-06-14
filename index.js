@@ -24,14 +24,45 @@ module.exports = () => {
     })
   }
 
+  const banners = [
+    {
+      comment: '',
+      title: '北弗里斯兰 · 不如去旅行',
+      url: 'https://www.tuchuang001.com/images/2017/06/14/sunset-50494_1280.md.jpg',
+    }, {
+      comment: '',
+      title: '也许只是承让了',
+      url: 'https://www.tuchuang001.com/images/2017/06/14/bird-2369177__480.md.jpg',
+    }, {
+      comment: '',
+      title: '人类学研究笔记',
+      url: 'https://www.tuchuang001.com/images/2017/06/14/buildings-2297210__480.md.jpg',
+    },
+  ]
+
+
   const startImage = {
     text: '© HaHa',
-    img: 'http://7xqlzr.dl1.z0.glb.clouddn.com/' +
-    '107bb4894b46d75a892da6fa80ef504a.jpg',
+    img: 'https://www.tuchuang001.com/images/2017/06/14/ship-2275399_1280.jpg',
   }
+
+  const posts = Array(faker.random.number({
+    min: 10,
+    max: 30,
+  })).fill(0).
+    map(() => ({
+      title: faker.lorem.slug(),
+      img: faker.image.nature(),
+      date: faker.date.recent(),
+    })
+  )
+
+  posts.sort((pre, next) => new Date(next.date) - new Date(pre.date))
 
   return {
     users,
+    banners,
     'start-image': startImage,
+    posts,
   }
 }
