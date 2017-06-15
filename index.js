@@ -43,7 +43,7 @@ module.exports = () => {
 
   const startImage = {
     text: '© HaHa',
-    img: 'https://www.tuchuang001.com/images/2017/06/14/ship-2275399_1280.jpg',
+    img: 'https://ooo.0o0.ooo/2017/06/16/5942e6866f7ef.jpg',
   }
 
   const posts = Array(faker.random.number({
