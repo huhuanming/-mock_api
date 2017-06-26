@@ -46,18 +46,20 @@ module.exports = () => {
     img: 'https://ooo.0o0.ooo/2017/06/16/5942e6866f7ef.jpg',
   }
 
-  const posts = Array(faker.random.number({
-    min: 10,
-    max: 30,
-  })).fill(0).
-    map(() => ({
-      title: faker.lorem.slug(),
-      img: faker.image.nature(),
-      date: faker.date.past(),
-    })
-  )
+  const now = Date.now()
+  const posts = new Array(5).fill(0).
+      map((post, dayIndex) =>
+        Array(faker.random.number({
+          min: 5,
+          max: 15,
+        })).fill(0).
+          map(() => ({
+            title: faker.lorem.slug(),
+            img: faker.image.nature(),
+            date: new Date(now - 86400000 * dayIndex),
+          })
+      ))
 
-  posts.sort((pre, next) => new Date(next.date) - new Date(pre.date))
 
   return {
     users,
