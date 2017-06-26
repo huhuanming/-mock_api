@@ -28,15 +28,15 @@ module.exports = () => {
     {
       comment: '',
       title: '北弗里斯兰 · 不如去旅行',
-      url: 'https://www.tuchuang001.com/images/2017/06/14/sunset-50494_1280.md.jpg',
+      url: 'https://ooo.0o0.ooo/2017/06/26/59512bbddc037.jpg',
     }, {
       comment: '',
       title: '也许只是承让了',
-      url: 'https://www.tuchuang001.com/images/2017/06/14/bird-2369177__480.md.jpg',
+      url: 'https://ooo.0o0.ooo/2017/06/26/59512bbddc299.jpg',
     }, {
       comment: '',
       title: '人类学研究笔记',
-      url: 'https://www.tuchuang001.com/images/2017/06/14/buildings-2297210__480.md.jpg',
+      url: 'https://ooo.0o0.ooo/2017/06/26/59512bbddcccc.jpg',
     },
   ]
 
@@ -53,7 +53,7 @@ module.exports = () => {
     map(() => ({
       title: faker.lorem.slug(),
       img: faker.image.nature(),
-      date: faker.date.recent(),
+      date: faker.date.past(),
     })
   )
 
