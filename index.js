@@ -62,7 +62,7 @@ module.exports = () => {
 
   const article = {
     image: 'https://ooo.0o0.ooo/2017/06/27/595241e3de9bb.jpg',
-    context: faker.lorem.paragraphs(100),
+    content: faker.lorem.paragraphs(100),
   }
 
   return {
