@@ -66,7 +66,6 @@ module.exports = () => {
   }
 
   return {
-    users,
     banners,
     'start-image': startImage,
     posts,
